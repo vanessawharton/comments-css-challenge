@@ -1,0 +1,231 @@
+body {
+    background-color:  hsl(228, 33%, 97%);
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+.comment {
+    display: grid;
+    grid-template-rows: 80px 60px 1fr;
+    grid-template-columns: 90px 60px 50px 50px 1fr 100px 100px;
+    border-radius: 8px;
+    margin: 20px 300px 20px 300px;
+    padding: 20px 30px 30px 20px;
+    background-color: white;
+    color: hsl(211, 10%, 45%);
+}
+
+.commentContainer {
+    font-family: 'Rubik', sans-serif !important;
+    font-size: 17px;
+    margin: 80px 0 0 0;
+}
+
+.deleteBtn {
+    display: inline-flex;
+    padding: 0 20px 20px 20px;
+    margin: 20px;
+    grid-row-start: 1;
+    grid-column-start: 6;
+    grid-row-end: 2;
+    grid-column-end: 6;
+    justify-items: right;
+    color: hsl(358, 79%, 66%);
+    border: none;
+    background-color: white;
+}
+
+.editBtn {
+    display: inline-flex;
+    grid-row-start: 1;
+    grid-column-start: 7;
+    grid-row-end: 2;
+    grid-column-end: 7;
+    justify-items: right;
+    color: hsl(238, 40%, 52%);
+    border: none;
+    background-color: white;
+    padding: 0 20px 20px 20px;
+    margin: 20px;
+}
+
+input {
+    border-radius: 8px;
+    border-style: solid;
+    border-color: hsl(223, 19%, 93%);
+    padding: 10px 400px 60px 20px;
+    margin: 10px 10px 10px 0;
+    color: hsl(211, 10%, 45%);
+}
+
+.likeBtn {
+    display: flex;
+    flex-direction: column;
+    width: 40px !important;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 2;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+
+.likeCountBtn {
+    color: hsl(239, 57%, 85%);
+    border: none;
+    padding-top: 8px;
+    color: hsl(238, 40%, 52%);
+    font-weight: bold;
+}
+
+.likeUpBtn {
+    border: none;
+    padding: 8px 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.likeDownBtn {
+    border: none;
+    padding: 8px 15px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.new-comment {
+    display: grid;
+    grid-template-columns: 60px 1fr 150px;
+    border-radius: 5px;
+    margin: 20px 300px;
+    padding: 20px;
+    background-color: white;
+}
+
+.postSince {
+    grid-row-start: 1;
+    grid-column-start: 5;
+    grid-row-end: 2;
+    grid-column-end: 5;
+    color: hsl(211, 10%, 45%);
+    width: 400px;
+    padding: 30px 10px 10px 20px;
+}
+
+.postText, .replyText {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 4;
+    grid-column-end: 8;
+}
+
+.profile-img {
+    float: left;
+    margin: 20px 0px 20px 0px;
+}
+
+.reply {
+    display: grid;
+    grid-template-rows: 80px 60px 1fr;
+    grid-template-columns: 90px 60px 70px 50px 1fr 100px 100px;
+    border-radius: 8px;
+    margin: 20px 300px 20px 40px;
+    padding: 20px 30px 30px 20px;
+    background-color: white;
+    color: hsl(211, 10%, 45%);
+}
+
+.replyBtn {
+    display: inline-flex;
+    grid-row-start: 1;
+    grid-column-start: 7;
+    grid-row-end: 2;
+    grid-column-end: 7;
+    justify-items: right;
+    color: hsl(238, 40%, 52%);
+    border: none;
+    background-color: white;
+    padding: 0 20px 20px 20px;
+    margin: 20px;
+}
+
+.reply-you {
+    display: grid;
+    grid-template-rows: 80px 60px 1fr;
+    grid-template-columns: 90px 60px 100px 50px 1fr 100px 100px;
+    border-radius: 8px;
+    margin: 20px 300px 20px 40px;
+    padding: 20px 30px 30px 20px;
+    background-color: white;
+    color: hsl(211, 10%, 45%);
+}
+
+
+.reply-to {
+    width: 100px !important;
+    color: hsl(238, 40%, 52%);
+    font-weight: bold;
+}
+
+.sendComment {
+    background-color: hsl(238, 40%, 52%);
+    color: white;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    padding: 5px 35px !important;
+    margin: 15px 15px 50px 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.userName {
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 2;
+    grid-column-end: 3;
+    justify-content: left;
+    color: hsl(212, 24%, 26%);
+    font-weight: bold;
+    padding: 30px 0 5px 0;
+}
+
+.vl {
+    border-left: 2px solid hsl(223, 19%, 93%);
+    margin: 0 0 0 360px;
+    height: 400px;
+}
+
+.you {
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-row-end: 2;
+    grid-column-end: 4;
+    color: white;
+    background-color: hsl(238, 40%, 52%);
+    width: 30px;
+    height: 15px;
+    padding: 2px 5px 8px 5px;
+    margin: 28px 0 0 0;
+}
+
+/* Reference
+color: hsl(238, 40%, 52%);
+background-color: hsl(239, 57%, 85%);
+border: 1px solid hsl(211, 10%, 45%);
+Moderate blue: hsl(238, 40%, 52%)
+Soft Red: hsl(358, 79%, 66%)
+Light grayish blue: hsl(239, 57%, 85%)
+Pale red: hsl(357, 100%, 86%)
+Dark blue: hsl(212, 24%, 26%)
+Grayish Blue: hsl(211, 10%, 45%)
+Light gray: hsl(223, 19%, 93%)
+Very light gray: hsl(228, 33%, 97%)
+White: hsl(0, 0%, 100%) */

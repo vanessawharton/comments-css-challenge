@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-
+  <link href="styles/stylesheet.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <!-- Fonts from google -->
@@ -14,47 +14,84 @@
 
   <title>CSS Challenge | Interactive comments section</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
 
-  <!-- Comment #1 -->
-  12
-  <img src="./images/avatars/image-amyrobson.png" alt="profile" />
-  amyrobson 
-  1 month ago
-  Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
+  <div class="commentContainer">
+    <!-- Comment #1 -->
+    <div class="comment">
+      <container class="likeBtn">
+        <button class="likeUpBtn"><img src="./images/icon-plus.svg" /></button>
+        <button class="likeCountBtn">12</button>
+        <button class="likeDownBtn"><img src="./images/icon-minus.svg" /></button>
+      </container>
+      <section class= "profile-img">
+        <img src="./images/avatars/image-amyrobson.png" style="width: 40px" alt="profile" />
+      </section>
+      <section class= "userName">amyrobson</section><section class="postSince">1 month ago</section><button class="replyBtn"><img src="./images/icon-reply.svg" style="margin-right: 5px" />  Reply</button>
+      <section class="postText">Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.</section>
+    </div>
+    <!-- Comment #2 -->
+    <div class="comment">
+      <container class="likeBtn">
+        <button class="likeUpBtn"><img src="./images/icon-plus.svg" /></button>
+        <button class="likeCountBtn">5</button>
+        <button class="likeDownBtn"><img src="./images/icon-minus.svg" /></button>
+      </container>
+      <section class= "profile-img">
+        <img src="./images/avatars/image-maxblagun.png" style="width: 40px" alt="profile" />
+      </section>
+      <section class= "userName">maxblagun</section><section class="postSince">2 weeks ago</section><button class="replyBtn"><img src="./images/icon-reply.svg" style="margin-right: 5px" />  Reply</button>
+      <section class="postText">Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!</section>
+    </div>
+    <!-- Comment #3 (Reply to comment #2) -->
+    <div class="vl">
+      <div class="reply">
+        <container class="likeBtn">
+          <button class="likeUpBtn"><img src="./images/icon-plus.svg" /></button>
+          <button class="likeCountBtn">4</button>
+          <button class="likeDownBtn"><img src="./images/icon-minus.svg" /></button>
+        </container>
+      <section class= "profile-img">
+        <img src="./images/avatars/image-ramsesmiron.png" style="width: 40px" alt="profile" />
+      </section>
+      <section class= "userName">ramsesmiron</section><section class="postSince">1 week ago</section><button class="replyBtn"><img src="./images/icon-reply.svg" style="margin-right: 5px" /> Reply</button>
+      <section class="replyText"><element class="reply-to">@maxblagun</element> If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</section>
+      </div>
+      <!-- Comment #4 (Reply to comment #2) -->
+      <div class="reply-you">
+        <container class="likeBtn">
+          <button class="likeUpBtn"><img src="./images/icon-plus.svg" /></button>
+          <button class="likeCountBtn">2</button>
+          <button class="likeDownBtn"><img src="./images/icon-minus.svg" /></button>
+        </container>
+          <section class= "profile-img">
+            <img src="./images/avatars/image-juliusomo.png" style="width: 40px" alt="profile" />
+          </section>
+          <section class= "userName">juliusomo </section><element class="you">you</element><section class="postSince">2 days ago</section><button class="deleteBtn"><img src="./images/icon-delete.svg" style="margin-right: 5px" /> Delete</button><button class="editBtn"><img src="./images/icon-edit.svg" style="margin-right: 5px"/> Edit</button>
+          <section class="replyText"><element class="reply-to">@ramsesmiron</element> I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.</section>
+      </div>
+    </div>
+  </div>
 
-  <!-- Comment #2 -->
-  5
-  <img src="./images/avatars/image-maxblagun.png" alt="profile" />
-  maxblagun 
-  2 weeks ago
-  Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
+  <div class="new-comment">
+    <section class= "profile-img">
+      <img src="./images/avatars/image-juliusomo.png" style="width: 40px" alt="profile" />
+    </section>
+    <input type="text" id="commentIn" placeholder="Add a comment...">
+    <button class="sendComment">SEND</button>
+  </div>
 
-  <!-- Comment #3 (Reply to comment #2) -->
-  4
-  <img src="./images/avatars/image-ramsesmiron.png" alt="profile" />
-  ramsesmiron 
-  1 week ago
-  @maxblagun If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.
+  <br/>
 
-  <!-- Comment #4 (Reply to comment #2) -->
-  2
-  <img src="./images/avatars/image-juliusomo.png" alt="profile" />
-  juliusomo 
-  2 days ago
-  @ramsesmiron I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.
-
-
-  
   <div class="attribution">
     Challenge adapted from <a href="https://www.frontendmentor.io/challenges/interactive-comments-section-iG1RugEG9" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Vanessa Wharton</a>.
   </div>
 </body>
 </html>
